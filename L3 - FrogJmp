@@ -1,0 +1,8 @@
+import math
+
+def solution(X, Y, D):
+    distance = Y-X
+    if X == Y:
+        return 0
+    else:
+        return math.ceil(distance / D)
