@@ -1,0 +1,7 @@
+def solution(A):
+
+    n = len(A)+1
+    right_sum = n * (n + 1)//2
+    actual_sum = sum(A)
+
+    return right_sum - actual_sum
