@@ -1,0 +1,11 @@
+def solution(A):
+    min_gap = float('inf')
+    left_tape = A[0]
+    right_tape = sum(A) - left_tape
+    for P in range(1,len(A)):
+        gap = abs(left_tape - right_tape)
+        left_tape += A[P]
+        right_tape -= A[P]
+        if gap < min_gap:
+            min_gap = gap
+    return min_gap
