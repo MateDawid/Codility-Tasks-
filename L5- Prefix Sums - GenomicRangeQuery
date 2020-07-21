@@ -1,0 +1,19 @@
+def solution(S, P, Q):
+    result = []
+    for i in range(len(P)):
+        down_range = P[i]
+        high_range = Q[i]
+        DNA = S[down_range:high_range+1]
+        if "A" in DNA:
+            result.append(1)
+            continue
+        if "C" in DNA:
+            result.append(2)
+            continue
+        if "G" in DNA:
+            result.append(3)
+            continue
+        if "T" in DNA:
+            result.append(4)
+            continue
+    return result
