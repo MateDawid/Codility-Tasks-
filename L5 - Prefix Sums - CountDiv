@@ -1,0 +1,7 @@
+def solution(A, B, K):
+    d = B - A
+    if A%K==0:
+        return int(d//K) + 1
+    else:
+        rest = A % K
+        return (d+rest)//K
